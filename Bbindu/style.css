@@ -1,0 +1,107 @@
+/* Basic Reset and Centering */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.calendar-container {
+    width: 350px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header with buttons */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+button {
+    background-color: #5b9bd5;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #4a8bc2;
+}
+
+/* Calendar Table Styling */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+th {
+    background-color: #5b9bd5;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+    cursor: pointer;
+    color: #333;
+}
+
+td:hover {
+    background-color: #e0f7fa;
+}
+
+td.empty {
+    background-color: #f4f4f4;
+}
+
+td.sun, td.sat {
+    color: #f44336; /* Red for weekends */
+}
+
+td.selected {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Responsive Styling */
+@media (max-width: 400px) {
+    .calendar-container {
+        width: 90%;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 1em;
+    }
+}
